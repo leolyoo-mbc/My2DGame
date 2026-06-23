@@ -1,20 +1,20 @@
-public abstract class CharacterBaseState
+namespace My2DGame
 {
-    protected Character character;
-
-    public CharacterBaseState(Character character)
+    public abstract class CharacterBaseState
     {
-        this.character = character;
+        protected Character character;
+
+        public CharacterBaseState(Character character)
+        {
+            this.character = character;
+        }
+
+        public abstract void Enter();
+        public abstract void LogicUpdate();
+        public abstract void PhysicsUpdate();
+        public abstract void Exit();
+        public abstract void HandleJump();
+        public abstract void HandleHit();
+        public abstract void HandleAttack();
     }
-
-    public abstract void Enter();
-    public abstract void LogicUpdate();
-    public abstract void PhysicsUpdate();
-    public abstract void Exit();
-
-    public abstract void HandleJump();
-
-    public abstract void HandleHit();
-
-    public abstract void HandleAttack();
 }
